@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <h1>上传视频名称：<%= moviename %></h1> 
+   <br />
+   <br />
+   <br />
+  <style type="text/css">
+    body { 
+      padding: 50px;
+      font: 13px Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+<span><a title="主页" href="/">home</a></span>
+<span><a title="上传" href="/upload">upload</a></span>
+</nav>
+
+<div style="text-align:center;">
+  <button onclick="videostr('<%= moviename %>')">播放/暂停</button> 
+  <button onclick="makeBig()">大</button>
+  <button onclick="makeNormal()">中</button>
+  <button onclick="makeSmall()">小</button>
+  <br /> 
+  <video autoplay="autoplay" id="video1" width="420" style="margin-top:15px;">
+    <source type="video/ogg" />
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+<script type="text/javascript">
+
+   function videostr(test)
+   {
+    var test='images/'+test+'.ogg';
+    document.getElementById("video1").src=test;
+    var myVideo = document.getElementById("video1");
+   }
+
+function playPause()
+{ 
+if (myVideo.paused) 
+  myVideo.play(); 
+else 
+  myVideo.pause(); 
+} 
+
+function makeBig()
+{ 
+myVideo.width=560; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=420; 
+} 
+
+
+
+
+</script> 
