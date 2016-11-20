@@ -1,14 +1,7 @@
-N-blog
-======
-
-使用 Express + MongoDB 搭建多人博客  
-
-教程见 [wiki](https://github.com/nswbmw/N-blog/wiki/_pages)
-
-
-### 分支说明
-
-- master: express4.x 版，受限于排版原因尽量做了最少的改动从原来的express3.x升到express4.x
-- express4.x: express4.x 版，代码进行了重构
-- koa: koa 版
-- master-express3.x-backup: express3.x 版，备份
+- name —— Fast2 (staubli应用工程师信息交互网站)
+- description —— 提供给工程师线上以及线下的程序交流窗口，为集成商以及最终用户提供相应的技术交流以及共享平台
+- author —— 陈鹏
+- main —— index.js
+- devDependencies —— 基于express+node+ejs+html5
+- function —— 以实现视频的上载以及图片的上载功能，用户权限的注册功能，留言以及转发相关功能
+- version —— 0.0.1
