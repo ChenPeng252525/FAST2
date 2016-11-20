@@ -2,7 +2,6 @@
 <p>
   <% if (user && (user.name == post.name)) { %>
     <span><a class="edit" href="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">编辑</a></span>
-    <span><a class="edit" href="/<%= post.movie %>">视频</a></span>
     <span><a class="edit" href="/remove/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">删除</a></span>
   <% } %>
   <% var flag = 1 %>
@@ -25,9 +24,10 @@
   <% } %>
 </p>
 <p class="info">
-  作者22：<a href="/u/<%= post.name %>"><%= post.name%></a> | 
-  日期22：<%= post.time.minute %> | 
-  标签22：
+    <span><a class="edit" href="/<%= post.movie %>">视频</a></span>
+  作者：<a href="/u/<%= post.name %>"><%= post.name%></a> | 
+  日期：<%= post.time.minute %> | 
+  标签：
   <% post.tags.forEach(function (tag, index) { %>
     <% if (tag) { %>
       <a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
@@ -39,9 +39,9 @@
 </p>
 <p><%- post.post %></p>
 <p class="info">
-  阅读11：<%= post.pv %> | 
-  评论11：<%= post.comments.length %> | 
-  转载11：
+  阅读：<%= post.pv %> | 
+  评论：<%= post.comments.length %> | 
+  转载：
   <% if (post.reprint_info.reprint_to) { %>
     <%= post.reprint_info.reprint_to.length %>
   <% } else { %>
